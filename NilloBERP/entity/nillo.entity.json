@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "nillo_be:nillo",
+      "materials": {
+        "default": "entity_custom"
+      },
+      "textures": {
+        "default": "textures/nillo_be/nillo",
+        "aqua": "textures/nillo_be/aqua_nillo",
+        "earth": "textures/nillo_be/earth_nillo",
+        "fire": "textures/nillo_be/fire_nillo",
+        "wind": "textures/nillo_be/wind_nillo"
+      },
+      "geometry": {
+        "default": "geometry.nillo",
+        "aqua": "geometry.aqua_nillo",
+        "earth": "geometry.earth_nillo",
+        "fire": "geometry.fire_nillo",
+        "wind": "geometry.wind_nillo"
+      },
+      "animations": {
+        "nillo_walk": "animation.nillo.walk",
+        "nillo_warn": "animation.nillo.warn",
+        "nillo_scaled": "animation.nillo.scaled",
+        "nillo_baby": "animation.nillo.baby",
+        "nillo_attack": "animation.nillo.attack"
+      },
+      "animation_controllers": [
+        {"nillo_attack_ac": "controller.animation.nillo.attack"},
+        {"nillo_baby_ac": "controller.animation.nillo.baby"},
+        {"nillo_walk_ac": "controller.animation.nillo.walk"}
+      ],
+      "render_controllers": [
+        "controller.render.nillo"
+      ],
+      "spawn_egg": {
+        "base_color": "#8c5b00",
+        "overlay_color": "#ffff00"
+      }
+    }
+  }
+}

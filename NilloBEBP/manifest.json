@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "NilloBEBP",
+        "name": "NilloBEBP",
+        "uuid": "bbaef26b-c375-4633-8efa-5d94bd767860",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 20, 70 ]
+    },
+    "modules": [
+        {
+            "description": "NilloBEBP",
+            "type": "data",
+            "uuid": "ffc83f93-dc00-4c95-99b8-0856c5e492f0",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "845f9f65-b983-43d1-a83e-5116c7f425c9",
+            "version": [0, 0, 1]
+        }
+    ]
+}

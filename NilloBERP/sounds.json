@@ -1,0 +1,27 @@
+{
+   "entity_sounds": {
+      "entities": {
+         "nillo_be:nillo": {
+            "events": {
+               "ambient": "mob.phantom.idle",
+               "attack": "mob.phantom.bite",
+               "death": "mob.phantom.death",
+               "flap": "mob.phantom.flap",
+               "hurt": "mob.phantom.hurt",
+               "swoop": {
+                  "pitch": [
+                     1.950,
+                     2.100
+                  ],
+                  "sound": "mob.phantom.swoop"
+               }
+            },
+            "pitch": [
+               1.950,
+               2.100
+            ],
+            "volume": 1.0
+         }
+      }
+   }
+}

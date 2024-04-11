@@ -1,0 +1,4 @@
+﻿## mob
+
+entity.nillo_be:nillo.name=ニロ
+item.spawn_egg.entity.nillo_be:nillo.name=ニロのスポーンエッグ

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "nillo_be:nillo",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:brightness_filter": {
+          "min": 7,
+          "max": 15,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 6
+        },
+        "minecraft:herd": {
+          "min_size":2,
+          "max_size":3
+        }
+      }
+    ]
+  }
+}

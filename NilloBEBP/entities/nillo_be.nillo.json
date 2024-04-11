@@ -1,0 +1,378 @@
+{
+  "format_version": "1.18.20",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "nillo_be:nillo",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "nillo_be:default": {
+        "minecraft:skin_id": {
+          "value": 0
+        },
+        "minecraft:floats_in_liquid": {},
+        "minecraft:movement.basic": {},
+        "minecraft:jump.static": {
+          "jump_power": 0.5
+        },
+        "minecraft:navigation.walk": {
+          "is_amphibious": true,
+          "can_walk": true,
+          "can_swim": true,
+          "can_jump": true,
+          "can_float": true
+        },
+        "minecraft:attack": {
+          "damage": 4
+        }
+      },
+      "nillo_be:aqua_nillo": {
+        "minecraft:skin_id": {
+          "value": 1
+        },
+        "minecraft:jump.static": {
+          "jump_power": 0.5
+        },
+        "minecraft:movement.sway": {
+          "sway_amplitude": 0.0
+        },
+        "minecraft:behavior.swim_idle": {
+          "priority": 5,
+          "idle_time": 5.0,
+          "success_rate": 0.1
+        },
+        "minecraft:behavior.random_swim": {
+          "priority": 3,
+          "speed_multiplier": 1.0,
+          "xz_dist": 16,
+          "y_dist": 4,
+          "interval": 0
+        },
+        "minecraft:behavior.swim_wander": {
+          "priority": 4,
+          "interval": 0.1,
+          "look_ahead": 2.0,
+          "speed_multiplier": 1.0,
+          "wander_time": 5.0
+        },
+        "minecraft:underwater_movement": {
+          "value": 0.6
+        },
+        "minecraft:attack": {
+          "damage": 4
+        }
+      },
+      "nillo_be:earth_nillo": {
+        "minecraft:skin_id": {
+          "value": 2
+        },
+        "minecraft:floats_in_liquid": {},
+        "minecraft:movement.basic": {},
+        "minecraft:jump.static": {
+          "jump_power": 0.5
+        },
+        "minecraft:navigation.walk": {
+          "is_amphibious": true,
+          "can_walk": true,
+          "can_swim": true,
+          "can_jump": true,
+          "can_float": true
+        },
+        "minecraft:attack": {
+          "damage": 3
+        }
+      },
+      "nillo_be:fire_nillo": {
+        "minecraft:skin_id": {
+          "value": 3
+        },
+        "minecraft:floats_in_liquid": {},
+        "minecraft:movement.basic": {},
+        "minecraft:jump.static": {
+          "jump_power": 0.5
+        },
+        "minecraft:navigation.walk": {
+          "is_amphibious": true,
+          "can_walk": true,
+          "can_swim": true,
+          "can_jump": true,
+          "can_float": true
+        },
+        "minecraft:attack": {
+          "damage": 6
+        },
+        "minecraft:fire_immune": {},
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "cause": "drowning"
+            }
+          ]
+        }
+      },
+      "nillo_be:wind_nillo": {
+        "minecraft:skin_id": {
+          "value": 4
+        },
+        "minecraft:flying_speed": {
+          "value": 0.15
+        },
+        "minecraft:can_fly": {},
+        "minecraft:navigation.fly": {
+          "can_path_over_water": true,
+          "can_path_from_air": true
+        },
+        "minecraft:movement.fly": {},
+        "minecraft:behavior.random_fly": {
+          "priority": 2,
+          "xz_dist": 15,
+          "y_dist": 1,
+          "y_offset": 0,
+          "speed_multiplier": 1.0,
+          "can_land_on_trees": true,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        }
+      },
+      "nillo_be:nillo_tamed": {
+        "minecraft:nameable": {},
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.follow_owner": {
+          "start_distance": 10,
+          "stop_distance": 2,
+          "can_teleport": true
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 5,
+          "must_see": true,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "skeleton"
+              },
+              "max_dist": 16
+            }
+          ]
+        },
+        "minecraft:sittable": {}
+      }
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:movement": {
+        "value": 0.4
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 15,
+        "interval": 5,
+        "speed_multiplier": 0.95
+      },
+      "minecraft:can_climb": {},
+      "minecraft:tameable": {
+        "probability": 0.8,
+        "tame_items": [
+          "minecraft:chicken"
+        ],
+        "tame_event": {
+          "event": "nillo_be:nillo_tamed_event",
+          "target": "self"
+        }
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 10
+      },
+      "minecraft:collision_box": {
+        "height": 0.5,
+        "width": 0.26
+      },
+      "minecraft:behavior.melee_attack": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "alert_same_type": false,
+        "hurt_owner": false
+      },
+      "minecraft:behavior.look_at_player": {
+        "look_distance": 3,
+        "probability": 5
+      },
+      "minecraft:type_family": {
+        "family": [
+          "mob"
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_biome",
+                  "value": "plain",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "forest",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "desert",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "flat",
+                  "subject": "self"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "nillo_be:default"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "in_water",
+                  "value": true,
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "ocean",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "river",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "beach",
+                  "subject": "self"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "nillo_be:aqua_nillo"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_biome",
+                  "value": "desert",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "mesa",
+                  "subject": "self"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "nillo_be:earth_nillo"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_biome",
+                  "value": "savanna",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "jungle",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "the_nether",
+                  "subject": "self"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "nillo_be:fire_nillo"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_biome",
+                  "value": "extreme_hills",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "taiga",
+                  "subject": "self"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "the_end",
+                  "subject": "self"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "nillo_be:wind_nillo"
+              ]
+            }
+          }
+        ]
+      },
+      "nillo_be:nillo_tamed_event": {
+        "add": {
+          "component_groups": [
+            "nillo_be:nillo_tamed"
+          ]
+        }
+      }
+    }
+  }
+}
