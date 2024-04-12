@@ -178,6 +178,10 @@
           "stop_distance": 2,
           "can_teleport": true
         },
+        "minecraft:behavior.breed": {
+          "priority": 2,
+          "speed_multiplier": 1.0
+        },
         "minecraft:behavior.owner_hurt_by_target": {
           "priority": 1
         },
@@ -198,7 +202,16 @@
             }
           ]
         },
-        "minecraft:sittable": {}
+        "minecraft:sittable": {
+          "sit_event": {
+            "event": "nillo_be:sit_event",
+            "target": "self"
+          },
+          "stand_event": {
+            "event": "nillo_be:stand_event",
+            "target": "self"
+          }
+        }
       },
       "nillo_angry": {
         "minecraft:behavior.owner_hurt_by_target": {
@@ -220,6 +233,16 @@
               "max_dist": 16
             }
           ]
+        }
+      },
+      "nillo_be:sit":{
+        "minecraft:movement": {
+          "value": 0.00
+        }
+      },
+      "nillo_be:stand":{
+        "minecraft:movement": {
+          "value": 0.4
         }
       }
     },
@@ -444,6 +467,22 @@
         "add": {
           "component_groups": [
             "nillo_be:nillo_angry"
+          ]
+        }
+      },
+      "nillo_be:sit_event": {
+        "add": {
+          "component_groups": [
+            "nillo_be:sit",
+            "nillo_be:nillo_tamed"
+          ]
+        }
+      },
+      "nillo_be:stand_event": {
+        "add": {
+          "component_groups": [
+            "nillo_be:stand",
+            "nillo_be:nillo_tamed"
           ]
         }
       }
