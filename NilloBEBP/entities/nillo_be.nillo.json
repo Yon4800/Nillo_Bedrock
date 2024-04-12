@@ -103,28 +103,24 @@
           "damage": 6
         },
         "minecraft:fire_immune": {},
-        "minecraft:damage_sensor": {
-          "triggers": [
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
             {
-              "on_damage": {
-                "filters": {
-                  "any_of":{
-                    "all_of": [
-                      {
-                        "test": "in_water_or_rain",
-                        "subject": "self",
-                        "value": true
-                      },
-                      {
-                        "test": "in_water",
-                        "subject": "self",
-                        "value": true
-                      }
-                    ]
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "in_water_or_rain",
+                    "subject": "self",
+                    "value": true
+                  },
+                  {
+                    "test": "in_water",
+                    "subject": "self",
+                    "value": true
                   }
-                }
+                ]
               },
-              "deals_damage": true
+              "damage_per_tick": 20
             }
           ]
         }
