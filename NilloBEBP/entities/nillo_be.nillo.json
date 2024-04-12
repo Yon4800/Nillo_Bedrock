@@ -88,7 +88,6 @@
         "minecraft:skin_id": {
           "value": 3
         },
-        "minecraft:floats_in_liquid": {},
         "minecraft:movement.basic": {},
         "minecraft:jump.static": {
           "jump_power": 0.5
@@ -104,10 +103,28 @@
           "damage": 6
         },
         "minecraft:fire_immune": {},
-        "minecraft:hurt_on_condition": {
-          "damage_conditions": [
+        "minecraft:damage_sensor": {
+          "triggers": [
             {
-              "cause": "drowning"
+              "on_damage": {
+                "filters": {
+                  "any_of":{
+                    "all_of": [
+                      {
+                        "test": "in_water_or_rain",
+                        "subject": "self",
+                        "value": true
+                      },
+                      {
+                        "test": "in_water",
+                        "subject": "self",
+                        "value": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "deals_damage": true
             }
           ]
         }
@@ -145,6 +162,8 @@
         "minecraft:nameable": {},
         "minecraft:is_tamed": {},
         "minecraft:behavior.follow_owner": {
+          "priority": 6,
+          "speed_multiplier": 1.0,
           "start_distance": 10,
           "stop_distance": 2,
           "can_teleport": true
@@ -163,13 +182,35 @@
               "filters": {
                 "test": "is_family",
                 "subject": "other",
-                "value": "skeleton"
+                "value": "monster"
               },
               "max_dist": 16
             }
           ]
         },
         "minecraft:sittable": {}
+      },
+      "nillo_angry": {
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 5,
+          "must_see": true,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "monster"
+              },
+              "max_dist": 16
+            }
+          ]
+        }
       }
     },
     "components": {
@@ -213,8 +254,7 @@
         "has_gravity": true
       },
       "minecraft:behavior.hurt_by_target": {
-        "alert_same_type": false,
-        "hurt_owner": false
+        "priority": 3
       },
       "minecraft:behavior.look_at_player": {
         "look_distance": 3,
@@ -223,6 +263,23 @@
       "minecraft:type_family": {
         "family": [
           "mob"
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "event": "nillobe:nillo_angry_event",
+              "target": "self",
+              "filters": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            }
+          }
         ]
       }
     },
@@ -370,6 +427,13 @@
         "add": {
           "component_groups": [
             "nillo_be:nillo_tamed"
+          ]
+        }
+      },
+      "nillo_be:nillo_angry_event": {
+        "add": {
+          "component_groups": [
+            "nillo_be:nillo_angry"
           ]
         }
       }

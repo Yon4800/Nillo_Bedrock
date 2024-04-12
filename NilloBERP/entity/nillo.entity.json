@@ -1,10 +1,10 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
       "identifier": "nillo_be:nillo",
       "materials": {
-        "default": "entity_custom"
+        "default": "entity_alphatest"
       },
       "textures": {
         "default": "textures/nillo_be/nillo",
@@ -25,13 +25,19 @@
         "nillo_warn": "animation.nillo.warn",
         "nillo_scaled": "animation.nillo.scaled",
         "nillo_baby": "animation.nillo.baby",
-        "nillo_attack": "animation.nillo.attack"
+        "nillo_attack": "animation.nillo.attack",
+        "nillo_walk_ac": "controller.animation.nillo.walk",
+        "nillo_attack_ac": "controller.animation.nillo.attack"
       },
-      "animation_controllers": [
-        {"nillo_attack_ac": "controller.animation.nillo.attack"},
-        {"nillo_baby_ac": "controller.animation.nillo.baby"},
-        {"nillo_walk_ac": "controller.animation.nillo.walk"}
-      ],
+      "scripts": {
+        "animate": [
+          "nillo_walk_ac",
+          {
+            "nillo_baby": "query.is_baby"
+          },
+          "nillo_attack_ac"
+        ]
+      },
       "render_controllers": [
         "controller.render.nillo"
       ],
