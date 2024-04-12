@@ -1,14 +1,6 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.nillo.scaled": {
-			"loop": true,
-			"bones": {
-				"head": {
-					"scale": [1, 0.9, 1]
-				}
-			}
-		},
 		"animation.nillo.baby": {
 			"loop": true,
 			"bones": {
@@ -17,7 +9,7 @@
 				},
 				"head": {
 					"position": [0, 0.5, 0],
-					"scale": 1.25
+					"scale": [1.25, 1.15, 1.25]
 				}
 			}
 		},
@@ -70,7 +62,8 @@
 							"post": [0, -20, 0],
 							"lerp_mode": "catmullrom"
 						}
-					}
+					},
+					"scale": [1, 0.9, 1]
 				}
 			}
 		},
@@ -83,7 +76,8 @@
 						"0.25": [-12.5, 0, 0],
 						"1.75": [-12.5, 0, 0],
 						"2.0": [0, 0, 0]
-					}
+					},
+					"scale": [1, 0.9, 1]
 				},
 				"jaw": {
 					"rotation": {
@@ -174,7 +168,8 @@
 							"post": [0, 0, 0],
 							"lerp_mode": "catmullrom"
 						}
-					}
+					},
+					"scale": [1, 0.9, 1]
 				},
 				"jaw": {
 					"rotation": {

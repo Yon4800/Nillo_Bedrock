@@ -23,7 +23,6 @@
       "animations": {
         "nillo_walk": "animation.nillo.walk",
         "nillo_warn": "animation.nillo.warn",
-        "nillo_scaled": "animation.nillo.scaled",
         "nillo_baby": "animation.nillo.baby",
         "nillo_attack": "animation.nillo.attack",
         "nillo_walk_ac": "controller.animation.nillo.walk",
