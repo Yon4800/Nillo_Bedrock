@@ -603,6 +603,7 @@
         "add": {
           "component_groups": [
             "nillo_be:nillo_baby",
+            "nillo_be:default",
             "nillo_be:nillo_tamed"
           ]
         }
