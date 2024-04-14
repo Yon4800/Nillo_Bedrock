@@ -126,11 +126,6 @@
                     "test": "in_water_or_rain",
                     "subject": "self",
                     "value": true
-                  },
-                  {
-                    "test": "in_water",
-                    "subject": "self",
-                    "value": true
                   }
                 ]
               },
@@ -235,12 +230,12 @@
           ]
         }
       },
-      "nillo_be:sit":{
+      "nillo_be:sit": {
         "minecraft:movement": {
           "value": 0.00
         }
       },
-      "nillo_be:stand":{
+      "nillo_be:stand": {
         "minecraft:movement": {
           "value": 0.4
         }
