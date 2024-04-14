@@ -1,5 +1,5 @@
 {
-  "format_version": "1.18.20",
+  "format_version": "1.20.70",
   "minecraft:entity": {
     "description": {
       "identifier": "nillo_be:nillo",
@@ -208,7 +208,7 @@
           }
         }
       },
-      "nillo_angry": {
+      "nillo_be:nillo_angry": {
         "minecraft:behavior.owner_hurt_by_target": {
           "priority": 1
         },
@@ -297,7 +297,7 @@
         "triggers": [
           {
             "on_damage": {
-              "event": "nillobe:nillo_angry_event",
+              "event": "nillo_be:nillo_angry_event",
               "target": "self",
               "filters": [
                 {
