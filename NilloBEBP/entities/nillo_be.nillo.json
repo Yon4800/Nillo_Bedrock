@@ -109,9 +109,7 @@
         "minecraft:navigation.walk": {
           "is_amphibious": true,
           "can_walk": true,
-          "can_swim": true,
-          "can_jump": true,
-          "can_float": true
+          "can_jump": true
         },
         "minecraft:attack": {
           "damage": 6
@@ -121,15 +119,12 @@
           "damage_conditions": [
             {
               "filters": {
-                "any_of": [
-                  {
-                    "test": "in_water_or_rain",
-                    "subject": "self",
-                    "value": true
-                  }
-                ]
+                "test": "in_water_or_rain",
+                "subject": "self",
+                "value": true
               },
-              "damage_per_tick": 20
+              "cause": "drowning",
+              "damage_per_tick": 1
             }
           ]
         }
