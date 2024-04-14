@@ -19,7 +19,7 @@
             "chicken"
           ],
           "grow_up": {
-            "event": "nillo_be:nillo_adult",
+            "event": "nillo_be:nillo_adult_event",
             "target": "self"
           }
         }
@@ -607,6 +607,55 @@
             "nillo_be:nillo_tamed"
           ]
         }
+      },
+      "nillo_be:nillo_adult_event":{
+        "randomize": [
+          {
+            "add": {
+              "component_groups": [
+                "nillo_be:default",
+                "nillo_be:nillo_adult"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "add": {
+              "component_groups": [
+                "nillo_be:aqua_nillo",
+                "nillo_be:nillo_adult"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "add": {
+              "component_groups": [
+                "nillo_be:earth_nillo",
+                "nillo_be:nillo_adult"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "add": {
+              "component_groups": [
+                "nillo_be:fire_nillo",
+                "nillo_be:nillo_adult"
+              ]
+            },
+            "weight": 1
+          },
+          {
+            "add": {
+              "component_groups": [
+                "nillo_be:wind_nillo",
+                "nillo_be:nillo_adult"
+              ]
+            },
+            "weight": 1
+          }
+        ]
       }
     }
   }
