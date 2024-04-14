@@ -274,6 +274,7 @@
         "minecraft:movement": {
           "value": 0.00
         }
+
       },
       "nillo_be:stand": {
         "minecraft:movement": {
@@ -586,16 +587,24 @@
       "nillo_be:sit_event": {
         "add": {
           "component_groups": [
-            "nillo_be:sit",
-            "nillo_be:nillo_tamed"
+            "nillo_be:sit"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "nillo_be:stand"
           ]
         }
       },
       "nillo_be:stand_event": {
         "add": {
           "component_groups": [
-            "nillo_be:stand",
-            "nillo_be:nillo_tamed"
+            "nillo_be:stand"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "nillo_be:sit"
           ]
         }
       },

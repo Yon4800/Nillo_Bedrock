@@ -46,6 +46,28 @@
                     ]
                 }
             }
+        },
+        "controller.animation.nillo.sit":{
+            "initial_state": "default",
+            "states": {
+                "sit_down": {
+                    "animations": [
+                        "nillo_warn"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_sitting"
+                        }
+                    ]
+                },
+                "default":{
+                    "transitions": [
+                        {
+                            "sit_down": "query.is_sitting"
+                        }
+                    ]
+                }
+            }
         }
     }
 }

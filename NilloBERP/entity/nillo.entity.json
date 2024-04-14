@@ -26,7 +26,8 @@
         "nillo_baby": "animation.nillo.baby",
         "nillo_attack": "animation.nillo.attack",
         "nillo_walk_ac": "controller.animation.nillo.walk",
-        "nillo_attack_ac": "controller.animation.nillo.attack"
+        "nillo_attack_ac": "controller.animation.nillo.attack",
+        "nillo_sit_ac": "controller.animation.nillo.sit"
       },
       "scripts": {
         "animate": [
@@ -34,7 +35,8 @@
           {
             "nillo_baby": "query.is_baby"
           },
-          "nillo_attack_ac"
+          "nillo_attack_ac",
+          "nillo_sit_ac"
         ]
       },
       "render_controllers": [
