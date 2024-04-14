@@ -10,9 +10,6 @@
     "component_groups": {
       "nillo_be:nillo_baby": {
         "minecraft:is_baby": {},
-        "minecraft:scale": {
-          "value": 0.5
-        },
         "minecraft:ageable": {
           "duration": 800,
           "feed_items": [
@@ -611,13 +608,18 @@
           ]
         }
       },
-      "nillo_be:nillo_adult_event":{
+      "nillo_be:nillo_adult_event": {
         "randomize": [
           {
             "add": {
               "component_groups": [
                 "nillo_be:default",
                 "nillo_be:nillo_adult"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "nillo_be:nillo_baby"
               ]
             },
             "weight": 1
@@ -629,6 +631,11 @@
                 "nillo_be:nillo_adult"
               ]
             },
+            "remove": {
+              "component_groups": [
+                "nillo_be:nillo_baby"
+              ]
+            },
             "weight": 1
           },
           {
@@ -636,6 +643,11 @@
               "component_groups": [
                 "nillo_be:earth_nillo",
                 "nillo_be:nillo_adult"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "nillo_be:nillo_baby"
               ]
             },
             "weight": 1
@@ -647,6 +659,11 @@
                 "nillo_be:nillo_adult"
               ]
             },
+            "remove": {
+              "component_groups": [
+                "nillo_be:nillo_baby"
+              ]
+            },
             "weight": 1
           },
           {
@@ -654,6 +671,11 @@
               "component_groups": [
                 "nillo_be:wind_nillo",
                 "nillo_be:nillo_adult"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "nillo_be:nillo_baby"
               ]
             },
             "weight": 1
