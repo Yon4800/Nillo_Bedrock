@@ -1,5 +1,5 @@
 # JA
-# Minecraft Bedrock ニロ追加アドオン(？)
+# Minecraft Bedrock ニロ追加アドオン
 ## このアドオンは？
 このアドオンは、ミラさん制作のMinecraft Java Editionのとある配布マップのデータパックの一部の要素であるニロというmobを私よんぱちさん(Yon4800)がMinecraft Bedrock Edition向けにアドオンとして移植したものです。
 ## 導入方法
@@ -18,7 +18,7 @@ https://github.com/Mojang/<br>
 https://github.com/Mojang/bedrock-samples<br>
 
 # EN
-# Minecraft Bedrock 「Nillo」 additional addon(?)
+# Minecraft Bedrock 「Nillo」 additional addon
 ## What is this addon?
 This add-on is a mob called 「Nillo」, which is part of the data pack of a certain distribution map of Minecraft Java Edition created by Mira, and was ported by me (Yon4800) as an add-on for Minecraft Bedrock Edition.
 ## How to install
