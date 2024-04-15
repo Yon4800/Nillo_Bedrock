@@ -628,7 +628,8 @@
             },
             "remove": {
               "component_groups": [
-                "nillo_be:nillo_baby"
+                "nillo_be:nillo_baby",
+                "nillo_be:default"
               ]
             },
             "weight": 1
@@ -642,7 +643,8 @@
             },
             "remove": {
               "component_groups": [
-                "nillo_be:nillo_baby"
+                "nillo_be:nillo_baby",
+                "nillo_be:default"
               ]
             },
             "weight": 1
@@ -656,7 +658,8 @@
             },
             "remove": {
               "component_groups": [
-                "nillo_be:nillo_baby"
+                "nillo_be:nillo_baby",
+                "nillo_be:default"
               ]
             },
             "weight": 1
@@ -670,7 +673,8 @@
             },
             "remove": {
               "component_groups": [
-                "nillo_be:nillo_baby"
+                "nillo_be:nillo_baby",
+                "nillo_be:default"
               ]
             },
             "weight": 1
@@ -684,7 +688,8 @@
             },
             "remove": {
               "component_groups": [
-                "nillo_be:nillo_baby"
+                "nillo_be:nillo_baby",
+                "nillo_be:default"
               ]
             },
             "weight": 1
