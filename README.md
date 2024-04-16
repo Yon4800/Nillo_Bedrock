@@ -27,7 +27,7 @@ I will omit the explanation after that, but if there is anything you don't under
 ## Notes
 - Please note that I (Yonpachi), Mira-sama, and other parties will not be held responsible for any losses or errors caused by installing this add-on.
 - Assume that the rights related to the mob itself, such as the copyright, are on Mira's side. Please note that I am publishing this add-on with Mira's permission.
-- Redistribution (unauthorized reproduction) of this add-on, making statements as your own work, and any other acts that infringe on rights are strictly prohibited**. If you find it, please report it to this issue etc.
+- Redistribution (unauthorized reproduction) of this add-on, making statements as your own work, and any other acts that infringe on rights are strictly prohibited. If you find it, please report it to this issue etc.
 ## Credit, special thanks
 - Mira<br>
 https://www.nicovideo.jp/user/88928586<br>
