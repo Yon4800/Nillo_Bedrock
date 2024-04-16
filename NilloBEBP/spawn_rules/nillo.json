@@ -7,17 +7,33 @@
     },
     "conditions": [
       {
-        "minecraft:brightness_filter": {
-          "min": 7,
-          "max": 15,
-          "adjust_for_weather": false
-        },
         "minecraft:weight": {
           "default": 26
         },
         "minecraft:herd": {
-          "min_size":2,
-          "max_size":3
+          "min_size": 2,
+          "max_size": 4
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "animal"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            }
+          ]
+        },
+        "minecraft:spawns_on_surface": {},
+        "minecraft:spawns_underwater": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 15,
+          "adjust_for_weather": false
         }
       }
     ]
