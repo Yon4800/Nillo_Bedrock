@@ -131,7 +131,9 @@
           "can_float": true
         },
         "minecraft:attack": {
-          "damage": 3
+          "damage": 3,
+          "effect_duration": 5,
+          "effect_name": "poison"
         }
       },
       "nillo_be:fire_nillo": {
